@@ -1,0 +1,99 @@
+:root {
+  --leave-width: 43.8%;
+  --leave-top: 35vh;
+
+  --hope-width: 80.2%;
+  --hope-top: 40vh;
+
+  --someone-width: 35.9%;
+  --someone-top: 40vh;
+
+  --here-width: 54.6%;
+  --here-top: 40vh;
+
+  --entering-width: 63.5%;
+  --entering-top: 40vh;
+  --entering-bottom: 28vh;
+}
+
+@import "reset.css";
+
+* {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-color: red;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+#starter {
+  background-color: white;
+}
+
+#hell-leave {
+  width: var(--leave-width);
+  margin-top: var(--leave-top);
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#hell-hope {
+  width: var(--hope-width);
+  margin-top: var(--hope-top);
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#hell-someone {
+  width: var(--someone-width);
+  margin-top: var(--someone-top);
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#hell-here {
+  width: var(--here-width);
+  margin-top: var(--here-top);
+  transform: translateX(-2vw);
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#hell-entering {
+  width: var(--entering-width);
+  margin-top: var(--entering-top);
+  margin-bottom: var(--entering-bottom);
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.circle-walls {
+  height: 100vh;
+  display: block;
+  margin: 0;
+}
+
+.walls {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+}
+
+#first-circle-left {
+  float: left;
+}
+
+#first-circle-right {
+  float: left;
+}
