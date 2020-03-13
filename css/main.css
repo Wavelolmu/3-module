@@ -14,6 +14,33 @@
   --entering-width: 63.5%;
   --entering-top: 40vh;
   --entering-bottom: 28vh;
+
+  --first-circle-width: 4;
+  --first-circle-move: 35%;
+
+  --second-circle-width: 2.4;
+  --second-circle-move: 28%;
+
+  --third-circle-width: 1.9;
+  --third-circle-move: 23%;
+
+  --fourth-circle-width: 1.65;
+  --fourth-circle-move: 19.7%;
+
+  --fifth-circle-width: 1.06;
+  --fifth-circle-move: 2.9%;
+
+  --sixth-circle-width: 1.06;
+  --sixth-circle-move: 2.8%;
+
+  --seventh-circle-width: 1.06;
+  --seventh-circle-move: 2.8%;
+
+  --eighth-circle-width: 1.06;
+  --eighth-circle-move: 2.8%;
+
+  --nineth-circle-width: 1.06;
+  --nineth-circle-move: 2.8%;
 }
 
 @import "reset.css";
@@ -29,6 +56,7 @@ body {
   overflow-x: hidden;
   margin: 0;
   padding: 0;
+  width: 100vw;
 }
 
 #starter {
@@ -91,9 +119,64 @@ body {
 }
 
 #first-circle-left {
-  float: left;
+  width: 11.46vw;
+}
+#first-circle-right {
+  width: 11.46vw;
 }
 
-#first-circle-right {
-  float: left;
+#second-circle-left {
+  width: 14.72vw;
+}
+#second-circle-right {
+  width: 14.72vw;
+}
+
+#third-circle-left {
+  width: 18.26vw;
+}
+#third-circle-right {
+  width: 18.26vw;
+}
+
+#fourth-circle-left {
+  width: 21.86vw;
+}
+#fourth-circle-right {
+  width: 21.86vw;
+}
+
+#fifth-circle-left {
+  width: 25.9vw;
+}
+#fifth-circle-right {
+  width: 25.9vw;
+}
+
+#sixth-circle-left {
+  width: 28.61vw;
+}
+#sixth-circle-right {
+  width: 28.61vw;
+}
+
+#seventh-circle-left {
+  width: 31.46vw;
+}
+#seventh-circle-right {
+  width: 31.46vw;
+}
+
+#eighth-circle-left {
+  width: 35.83vw;
+}
+#eighth-circle-right {
+  width: 35.83vw;
+}
+
+#nineth-circle-left {
+  width: 38.19vw;
+}
+#nineth-circle-right {
+  width: 38.19vw;
 }
