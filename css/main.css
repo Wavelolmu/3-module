@@ -3,17 +3,16 @@
   --leave-top: 35vh;
 
   --hope-width: 80.2%;
-  --hope-top: 40vh;
+  --hope-top: 28vh;
 
   --someone-width: 35.9%;
-  --someone-top: 40vh;
+  --someone-top: 13vh;
 
   --here-width: 54.6%;
-  --here-top: 40vh;
+  --here-top: 19vh;
 
   --entering-width: 63.5%;
-  --entering-top: 40vh;
-  --entering-bottom: 28vh;
+  --entering-top: 20vh;
 
   --first-circle-width: 4;
   --first-circle-move: 35%;
@@ -51,6 +50,13 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+html {
+  scroll-snap-type: mandatory;
+  scroll-snap-points-y: repeat(900px);
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: red;
   overflow-x: hidden;
@@ -63,20 +69,48 @@ body {
   background-color: white;
 }
 
+.hell {
+  scroll-snap-type: mandatory;
+  scroll-snap-points-y: repeat(100vh);
+  scroll-snap-type: y mandatory;
+}
+
+.hell div {
+  scroll-snap-align: start;
+}
+
+.hell-leave-section {
+  padding-top: var(--leave-top);
+  padding-bottom: calc(80vh - var(--leave-top));
+  scroll-snap-stop: always;
+}
+
 #hell-leave {
   width: var(--leave-width);
-  margin-top: var(--leave-top);
   display: block;
   margin-left: auto;
   margin-right: auto;
 }
 
+.hell-hope-section {
+  padding-top: var(--hope-top);
+  padding-bottom: calc(70vh - var(--hope-top));
+  scroll-snap-stop: always;
+  scroll-behavior: smooth;
+}
+
 #hell-hope {
   width: var(--hope-width);
-  margin-top: var(--hope-top);
   display: block;
   margin-left: auto;
   margin-right: auto;
+  scroll-padding: 200px;
+}
+
+.hell-someone-section {
+  padding-top: var(--someone-top);
+  padding-bottom: calc(50vh - var(--someone-top));
+  scroll-snap-stop: always;
 }
 
 #hell-someone {
@@ -87,19 +121,28 @@ body {
   margin-right: auto;
 }
 
+.hell-here-section {
+  padding-top: var(--here-top);
+  padding-bottom: calc(50vh - var(--here-top));
+  scroll-snap-stop: always;
+}
+
 #hell-here {
   width: var(--here-width);
-  margin-top: var(--here-top);
   transform: translateX(-2vw);
   display: block;
   margin-left: auto;
   margin-right: auto;
 }
 
+.hell-entering-section {
+  padding-top: var(--entering-top);
+  padding-bottom: calc(50vh - var(--entering-top));
+  scroll-snap-stop: always;
+}
+
 #hell-entering {
   width: var(--entering-width);
-  margin-top: var(--entering-top);
-  margin-bottom: var(--entering-bottom);
   display: block;
   margin-left: auto;
   margin-right: auto;
