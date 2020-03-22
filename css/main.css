@@ -6,7 +6,7 @@
   --hope-top: 28vh;
 
   --someone-width: 35.9%;
-  --someone-top: 13vh;
+  --someone-top: 12.5vh;
 
   --here-width: 54.6%;
   --here-top: 19vh;
@@ -50,12 +50,10 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-html {
+/* html {
   scroll-snap-type: mandatory;
-  scroll-snap-points-y: repeat(900px);
   scroll-snap-type: y mandatory;
-  scroll-behavior: smooth;
-}
+} */
 
 body {
   background-color: red;
@@ -65,9 +63,13 @@ body {
   width: 100vw;
 }
 
-#starter {
+/* STARTER */
+
+.starter {
   background-color: white;
 }
+
+/* HELL */
 
 .hell {
   scroll-snap-type: mandatory;
@@ -79,9 +81,11 @@ body {
   scroll-snap-align: start;
 }
 
+/* HELL WELCOME SIGN */
+
 .hell-leave-section {
-  padding-top: var(--leave-top);
-  padding-bottom: calc(80vh - var(--leave-top));
+  padding-top: 33.1vh;
+  padding-bottom: 34.09vh;
   scroll-snap-stop: always;
 }
 
@@ -148,6 +152,8 @@ body {
   margin-right: auto;
 }
 
+/* HELL CIRCLES */
+
 .circle-walls {
   height: 100vh;
   display: block;
@@ -161,65 +167,36 @@ body {
   padding: 0;
 }
 
-#first-circle-left {
-  width: 11.46vw;
-}
-#first-circle-right {
-  width: 11.46vw;
-}
+#first-circle-left {width: 11.46vw;}
+#first-circle-right {width: 11.46vw;}
 
-#second-circle-left {
-  width: 14.72vw;
-}
-#second-circle-right {
-  width: 14.72vw;
-}
+#second-circle-left {width: 14.72vw;}
+#second-circle-right {width: 14.72vw;}
 
-#third-circle-left {
-  width: 18.26vw;
-}
-#third-circle-right {
-  width: 18.26vw;
-}
+#third-circle-left {width: 18.26vw;}
+#third-circle-right {width: 18.26vw;}
 
-#fourth-circle-left {
-  width: 21.86vw;
-}
-#fourth-circle-right {
-  width: 21.86vw;
-}
+#fourth-circle-left {width: 21.86vw;}
+#fourth-circle-right {width: 21.86vw;}
 
-#fifth-circle-left {
-  width: 25.9vw;
-}
-#fifth-circle-right {
-  width: 25.9vw;
-}
+#fifth-circle-left {width: 25.9vw;}
+#fifth-circle-right {width: 25.9vw;}
 
-#sixth-circle-left {
-  width: 28.61vw;
-}
-#sixth-circle-right {
-  width: 28.61vw;
-}
+#sixth-circle-left {width: 28.61vw;}
+#sixth-circle-right {width: 28.61vw;}
 
-#seventh-circle-left {
-  width: 31.46vw;
-}
-#seventh-circle-right {
-  width: 31.46vw;
-}
+#seventh-circle-left {width: 31.46vw;}
+#seventh-circle-right {width: 31.46vw;}
 
-#eighth-circle-left {
-  width: 35.83vw;
-}
-#eighth-circle-right {
-  width: 35.83vw;
-}
+#eighth-circle-left {width: 35.83vw;}
+#eighth-circle-right {width: 35.83vw;}
 
-#nineth-circle-left {
-  width: 38.19vw;
-}
-#nineth-circle-right {
-  width: 38.19vw;
+#nineth-circle-left {width: 38.19vw;}
+#nineth-circle-right {width: 38.19vw;}
+
+/* AFTER-HELL */
+
+.after-hell {
+  background-color: black;
+  height: 200px;
 }
