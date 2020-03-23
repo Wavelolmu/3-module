@@ -1,17 +1,41 @@
 :root {
 
   /* STARTER */
-  --starter-logo-height: 23.13vh;
-  --starter-logo-top: 6.87vh;
+  --starter-logo-height: 190px;
+  --starter-logo-top: 9vh;
 
-  --starter-angel-height: 75vh;
-  --starter-angel-top: 8.89vh;
-  --starter-angel-left: 15vw;
+  --starter-angel-height: 520px;
+  --starter-angel-top: 10.89vh;
+  --starter-angel-transform: -235px;
 
-  --starter-goat-height: 45vh;
-  --starter-goat-top: 10vh;
-  --starter-goat-left: 40vw;
+  --starter-goat-height: 260px;
+  --starter-goat-transform: 100px;
 
+  --star-height: 60px;
+  --star-delay: 0ms;
+  --star-delay1: 0ms;
+  --star-delay2: 0ms;
+  --star-delay3: 0ms;
+  --star-delay4: 0ms;
+  --star-delay5: 0ms;
+  --star-delay6: 0ms;
+  --star-delay7: 0ms;
+  --star-delay8: 0ms;
+  --starter-introtext-width: 570px;
+
+  --starter-dihotomia-height: 285px;
+  --starter-moon-height: 221px;
+  --starter-boyfriend-height: 218px;
+  --starter-dihotomia-top: 170vh;
+  --starter-moon-top: 200vh;
+  --starter-boyfriend-top: 170vh;
+
+  --starter-button-height: 38px;
+  --starter-button-width: 313px;
+  --starter-button-fontsize: 24px;
+
+  --starter-tarot-width: 15.92vw;
+  --starter-tarot-radius: 15px;
 
   /* HELL CIRCLES */
 
@@ -59,6 +83,10 @@
 }
 
 @import "reset.css";
+@font-face {
+  font-family: "Keleti";
+  src: url('keleti.ttf') format('truetype');
+}
 
 * {
   box-sizing: border-box;
@@ -76,6 +104,7 @@ body {
   margin: 0;
   padding: 0;
   width: 100vw;
+  font-family: 'Keleti', sans-serif;
 }
 
 /* STARTER */
@@ -84,51 +113,226 @@ body {
   background-color: white;
   padding: 0;
   margin: 0;
-  height: 1000px;
+  height: 266vh;
 }
 
 .starter-intro {
-  width: 100%;
+  display: block;
 }
 
 #starter-logo {
   height: var(--starter-logo-height);
-  position: absolute;
-  display: block;
-  width: 100%;
-  left: auto;
-  right: auto;
   top: var(--starter-logo-top);
+  position: absolute;
+  margin: auto;
+  left: 20px;
+  right: 0;
+  text-align: center;
+  mix-blend-mode: multiply;
   z-index: 3;
 }
+
 #starter-goat {
   height: var(--starter-goat-height);
+  top: calc(var(--starter-logo-height) + var(--starter-logo-top) - 4vh);
+  transform: translate(var(--starter-goat-transform));
   position: absolute;
-  display: block;
-  width: auto;
-  left: auto;
-  right: auto;
-  top: var(--starter-goat-top);
+  margin: auto;
+  left: 20px;
+  right: 0;
+  text-align: center;
+  mix-blend-mode: multiply;
 }
+
 #starter-angel {
   height: var(--starter-angel-height);
-  position: absolute;
-  display: block;
-  width: 400px;
-  left: var(--starter-angel-left);
   top: var(--starter-angel-top);
+  transform: translate(var(--starter-angel-transform));
+  position: absolute;
+  margin: auto;
+  left: 20px;
+  right: 0;
+  text-align: center;
+  mix-blend-mode: multiply;
 }
 
+.star {
+  height: var(--star-height);
+  width: calc(var(--star-height) * 0.661);
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
+  text-align: center;
+  animation: shiningStar 3s linear infinite;
+}
 
+@keyframes shiningStar {
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.star path {
+  fill: black;
+  stroke: black;
+  transition: all 0.22s ease-in;
+}
+
+.star path:hover {
+  fill: #36ffc3;
+  stroke: #36ffc3;
+}
+
+#starter-star1 {
+  right: 845px;
+  top: 11vh;
+  animation-delay: var(--star-delay1);
+}
+#starter-star2 {
+  left: 480px;
+  margin-top: calc(var(--starter-logo-height) + var(--starter-logo-top) - 50px);
+  animation-delay: var(--star-delay2);
+}
+#starter-star3 {
+  left: calc(480px + 50px);
+  margin-top: calc(var(--starter-logo-height) + var(--starter-logo-top));
+  height: 50px;
+  animation-delay: var(--star-delay3);
+}
+
+#starter-introtext {
+  width: var(--starter-introtext-width);
+  display: inline-block;
+  position: relative;
+  top: calc(var(--starter-angel-height) + var(--starter-angel-top) + 20vh);
+  left: 50%;
+  transform: translateX(calc(var(--starter-introtext-width) / 2 * -1 - 10px));
+  font-size: 23px;
+  line-height: 28px;
+
+}
+
+#starter-introtext span {
+  font-size: 40px;
+  line-height: 28px;
+}
 
 #starter-tarot-moon {
-  display: none;
+  height: var(--starter-moon-height);
+  position: absolute;
+  top: var(--starter-moon-top);
+  margin: auto;
+  left: 800px;
+  right: 0;
+  text-align: center;
+  mix-blend-mode: multiply;
+  z-index: 0;
 }
 #starter-tarot-dihotomia {
-  display: none;
+  height: var(--starter-dihotomia-height);
+  top: var(--starter-dihotomia-top);
+  position: absolute;
+  margin: auto;
+  left: -800px;
+  right: 0;
+  text-align: center;
+  mix-blend-mode: multiply;
+  z-index: 0;
 }
 #starter-tarot-boyfriend {
-  display: none;
+  height: var(--starter-boyfriend-height);
+  top: var(--starter-boyfriend-top);
+  transform: translateY(90px);
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
+  text-align: center;
+  mix-blend-mode: multiply;
+  z-index: 10;
+  transition: transform 0.4s ease-in-out;
+}
+#starter-tarot-button {
+  width: var(--starter-button-width);
+  height: var(--starter-button-height);
+  background: none;
+  border-radius: 30px;
+  font-family: 'Keleti', sans-serif;
+  font-size: var(--starter-button-fontsize);
+  border: 2px solid black;
+  position: relative;
+  display: block;
+  margin: 0 auto;
+  margin-top: 200vh;
+  transform: translate(-10px);
+  cursor: pointer;
+  z-index: 100;
+  outline: none;
+  opacity: 1;
+  transition: opacity 0.2s ease-out;
+}
+
+.starter-tarot-cards {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  width: 88vw;
+  margin: auto;
+  left: 0px;
+  right: 0;
+  text-align: center;
+  top: 201.5vh;
+}
+
+.starter-tarot-card {
+  width: var(--starter-tarot-width);
+  height: calc(var(--starter-tarot-width) * 1.6);
+  background-color: #36ffc3;
+  border-radius: var(--starter-tarot-radius);
+  border: 1px solid white;
+  transition: transform 0.5s cubic-bezier(0.33, 1, 0.68, 1);
+  transition-delay: 0.1s;
+  display: block;
+  position: relative;
+  cursor: pointer;
+}
+
+.starter-tarot-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0px 0px 45px #36ffc3;
+}
+
+@keyframes card {
+  100% {
+
+  }
+}
+
+#starter-tarot-card1 {
+  transform: translate(23vw, -13.9vh) rotate(-32.65deg)  scale(1.15);
+}
+
+#starter-tarot-card2 {
+  transform: translate(11vw, -15.9vh) rotate(-18.56deg)  scale(1.15);
+}
+#starter-tarot-card3 {
+  transform: translate(-1vw, -20.4vh) rotate(-0.41deg) scale(1.15);
+}
+#starter-tarot-card4 {
+  transform: translate(-11.5vw, -10.4vh) rotate(14.25deg) scale(1.15);
+  z-index: 2;
+  position: relative;
+}
+#starter-tarot-card5 {
+  transform: translate(-23vw, -13.4vh) rotate(29.78deg) scale(1.15);
+  z-index: 0;
+  position: relative;
+}
+#starter-star4 {
+  right: 845px;
+  top: 250vh;
+  animation-delay: var(--star-delay1);
 }
 
 /* HELL */
@@ -138,6 +342,7 @@ body {
   scroll-snap-points-y: repeat(100vh);
   scroll-snap-type: y mandatory;
   background-color: red;
+  display: none;
 }
 
 .hell div {
@@ -262,4 +467,5 @@ body {
 .after-hell {
   background-color: black;
   height: 200px;
+  display: none;
 }
