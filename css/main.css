@@ -6,7 +6,7 @@
 
   --starter-angel-height: 520px;
   --starter-angel-top: 10.89vh;
-  --starter-angel-transform: -235px;
+  --starter-angel-transform: -230px;
 
   --starter-goat-height: 260px;
   --starter-goat-transform: 100px;
@@ -27,7 +27,7 @@
   --starter-moon-height: 221px;
   --starter-boyfriend-height: 218px;
   --starter-dihotomia-top: 170vh;
-  --starter-moon-top: 200vh;
+  --starter-moon-top: 208vh;
   --starter-boyfriend-top: 170vh;
 
   --starter-button-height: 38px;
@@ -165,6 +165,7 @@ body {
   right: 0;
   text-align: center;
   animation: shiningStar 3s linear infinite;
+  z-index: 101;
 }
 
 @keyframes shiningStar {
@@ -185,7 +186,7 @@ body {
 }
 
 #starter-star1 {
-  right: 845px;
+  right: 835px;
   top: 11vh;
   animation-delay: var(--star-delay1);
 }
@@ -223,22 +224,24 @@ body {
   position: absolute;
   top: var(--starter-moon-top);
   margin: auto;
-  left: 800px;
+  left: 770px;
   right: 0;
   text-align: center;
   mix-blend-mode: multiply;
   z-index: 0;
+  transition: opacity 0.3s ease-in;
 }
 #starter-tarot-dihotomia {
   height: var(--starter-dihotomia-height);
   top: var(--starter-dihotomia-top);
   position: absolute;
   margin: auto;
-  left: -800px;
+  left: -780px;
   right: 0;
   text-align: center;
   mix-blend-mode: multiply;
   z-index: 0;
+  transition: opacity 0.3s ease-in;
 }
 #starter-tarot-boyfriend {
   height: var(--starter-boyfriend-height);
@@ -270,7 +273,12 @@ body {
   z-index: 100;
   outline: none;
   opacity: 1;
-  transition: opacity 0.2s ease-out;
+  transition: opacity 0.2s ease-out, border 0.3s ease-in, color 0.3s ease-in;
+}
+
+#starter-tarot-button:hover {
+  border: 2px solid blue;
+  color: blue;
 }
 
 .starter-tarot-cards {
@@ -285,27 +293,39 @@ body {
   top: 201.5vh;
 }
 
+#hover-disactivator {
+  position: absolute;
+  z-index: 80;
+  width: 88vw;
+  height: calc(var(--starter-tarot-width) * 1.6 * 1.6);
+  display: block;
+  top: 172vh;
+}
+
 .starter-tarot-card {
   width: var(--starter-tarot-width);
   height: calc(var(--starter-tarot-width) * 1.6);
   background-color: #36ffc3;
   border-radius: var(--starter-tarot-radius);
   border: 1px solid white;
-  transition: transform 0.5s cubic-bezier(0.33, 1, 0.68, 1);
+  transition: transform 0.5s cubic-bezier(0.33, 1, 0.68, 1), box-shadow 0.2s cubic-bezier(0.33, 1, 0.68, 1);
   transition-delay: 0.1s;
   display: block;
   position: relative;
   cursor: pointer;
+  z-index: 0;
 }
 
 .starter-tarot-card:hover {
   transform: translateY(-10px);
   box-shadow: 0px 0px 45px #36ffc3;
+  animation: card 0.5s ease-out;
+  animation-fill-mode: forwards;
 }
 
 @keyframes card {
   100% {
-
+    transform: translateY(-10px);
   }
 }
 
@@ -330,9 +350,54 @@ body {
   position: relative;
 }
 #starter-star4 {
-  right: 845px;
-  top: 250vh;
-  animation-delay: var(--star-delay1);
+  right: 938px;
+  top: 213vh;
+  animation-delay: var(--star-delay4);
+  height: 80px;
+  width: auto;
+  transition: opacity 0.25s ease-in;
+}
+#starter-star5 {
+  right: 1010px;
+  top: 206vh;
+  animation-delay: var(--star-delay5);
+  height: 60px;
+  width: auto;
+  transition: right 0.65s ease-out, top 0.65s ease-out;
+}
+#starter-star6 {
+  right: 620px;
+  top: 226vh;
+  animation-delay: var(--star-delay6);
+  height: 110px;
+  width: auto;
+  transition: right 0.7s ease-out, top 0.7s ease-out, height 0.8s ease-out;
+}
+#starter-star7 {
+  left: 700px;
+  top: 193vh;
+  animation-delay: var(--star-delay7);
+  height: 80px;
+  width: auto;
+  transition: left 0.7s ease-out, top 0.7s ease-out;
+}
+#starter-star8 {
+  left: 750px;
+  top: 185vh;
+  animation-delay: var(--star-delay8);
+  height: 60px;
+  width: auto;
+  transition: top 0.3s ease-out, height 0.3s ease-out;
+}
+#starter-star9 {
+  left: 1122px;
+  top: 240vh;
+  animation-delay: var(--star-delay9);
+  height: 60px;
+  width: auto;
+  transition: opacity 0.4s ease-out;
+  transition-delay: 0.4s;
+  opacity: 0;
 }
 
 /* HELL */
@@ -342,7 +407,7 @@ body {
   scroll-snap-points-y: repeat(100vh);
   scroll-snap-type: y mandatory;
   background-color: red;
-  display: none;
+  display: block;
 }
 
 .hell div {
